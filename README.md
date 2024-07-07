@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# MyReads: A Book Tracking App
+
+In the MyReads project, I created a bookshelf app that allows us to select and categorize books we have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library.
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

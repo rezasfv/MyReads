@@ -12,6 +12,7 @@ class CreateBook extends Component {
         if(this.props.onCreateBook){
             this.props.onCreateBook(values)
         }
+        console.log(values)
     };   
 
     render() {

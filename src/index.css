@@ -23,3 +23,13 @@ code {
   background-repeat: no-repeat;
   border-radius: 50%;
 }
+
+
+
+
+/* ListBooks.css */
+
+.btn.active {
+  background-color: #007bff; /* Change to your desired active color */
+  color: white;
+}

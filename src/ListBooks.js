@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ListBooks.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class ListBooks extends Component {
 
@@ -18,6 +19,12 @@ class ListBooks extends Component {
         });
     }
 
+    clearQuery = () => {
+        this.setState({
+            query: ''
+        });
+    }
+
     render() {
         const { books } = this.props;
         const { query } = this.state;
@@ -32,7 +39,17 @@ class ListBooks extends Component {
         );
 
         return (
+
             <div className="container">
+
+                <div className="menu">  
+                    <Link
+                    
+                     to='/create'
+                     className='btn btn-primary mb-4'
+                    >Add new book</Link>
+                </div>
+
                 {/* Search bar */}
                 <div className="row my-4">
                     <div className="col">
@@ -45,6 +62,17 @@ class ListBooks extends Component {
                         />
                     </div>
                 </div>
+                
+                {/* Status message and clear button */}
+                {query !== '' && (
+                    <div className="row mb-4">
+                        <div className="col d-flex align-items-center">
+                            <span className="me-3">Now showing {filteredBooks.length} out of {books.length}</span>
+                            <button className="btn btn-primary" onClick={this.clearQuery}>Show all the Books</button>
+                        </div>
+                    </div>
+                )}
+
 
                 {/* Book list */}
                 <div className="row">
